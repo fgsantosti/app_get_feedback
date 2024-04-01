@@ -10,6 +10,7 @@ class FeedbackParticipanteAbertaScreen extends StatefulWidget {
 class _FeedbackParticipanteAbertaScreen
     extends State<FeedbackParticipanteAbertaScreen> {
   List<String> questions = [
+    'Adquiriu algum produto na feira?',
     'O que mais gostou no evento?',
     'Qual foi a atividade mais interessante para você?',
     'Como você avaliaria a diversidade de atividades oferecidas?',
@@ -20,7 +21,7 @@ class _FeedbackParticipanteAbertaScreen
     'O que te atraiu a participar do evento?'
   ];
   List<String> answers =
-      List.filled(8, ''); // Lista para armazenar as respostas
+      List.filled(9, ''); // Lista para armazenar as respostas
 
   @override
   Widget build(BuildContext context) {

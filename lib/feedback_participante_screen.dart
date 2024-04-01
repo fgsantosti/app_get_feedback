@@ -8,33 +8,32 @@ class FeedbackParticipanteScreen extends StatefulWidget {
 
 class _FeedbackParticipanteScreen extends State<FeedbackParticipanteScreen> {
   int currentQuestion = 0;
-  int quantQuestion = 17;
+  int quantQuestion = 16;
   List<String> questions = [
     'Como você avaliaria sua experiência geral no evento?',
-    'O que achou do credenciamento?',
-    'O que achou do site?',
-    'O que achou da divulgação?',
-    'O que achou dos minicursos?',
-    'O que achou dos oficinas?',
-    'O que achou das mesas redondas?',
-    'O que achou das palestras?',
-    'O que achou dos seminários temáticos?',
-    'O que achou da feira exposição dos pequenos produtores?',
-    'O que achou da praça de alimentação?',
-    'O que achou das atrações culturais?',
-    'O que achou da sinalização?',
-    'O que achou dos palestrantes?',
-    'O que achou do funcionamento das dependências (banheiros, bebedouros, salas...)',
-    'O que achou da organização geral do evento?',
-    'O que achou do atendimento da saúde?',
-    'Adquiriu algum produto na feira?',
+    'Como você avalia o credenciamento?',
+    'Como você avalia o site?',
+    'Como você avalia a divulgação?',
+    'Como você avalia os minicursos?',
+    'Como você avalia as oficinas?',
+    'Como você avalia as mesas redondas?',
+    'Como você avalia as palestras?',
+    'Como você avalia os seminários temáticos?',
+    'Como você avalia a feira exposição dos pequenos produtores?',
+    'Como você avalia a praça de alimentação?',
+    'Como você avalia as atrações culturais?',
+    'Como você avalia a sinalização?',
+    'Como você avalia os palestrantes?',
+    'Como você avalia o funcionamento das dependências (banheiros, bebedouros, salas...)',
+    'Como você avalia a organização geral do evento?',
+    'Como você avalia o atendimento da saúde?',
   ];
-  List<int> feedbackList = List.filled(18, 0);
+  List<int> feedbackList = List.filled(17, 0);
 
   void submitFeedback(int rating) {
     setState(() {
       feedbackList[currentQuestion] = rating;
-      if (currentQuestion < 17) {
+      if (currentQuestion < 16) {
         currentQuestion++;
       } else {
         print("Feedback submitted: $feedbackList");
